@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+$primaryColor: #000;
+$textColor: #fff;
+$grayColor: #666;
+$fontSize: 16px;
+$fontRoboto: 'Roboto Condensed', sans-serif;
+$fontRaleway: 'Raleway';
+
+body {
+  .container-fluid {
+    padding: 0px;
+    .header {
+      margin-top: 100px;
+      p:first-of-type {
+        font-size: 14px;
+        color: #010101;
+        font-family: $fontRaleway;
+        font-weight: 300;
+      }
+      h1 {
+        font-size: 36px;
+        color: $primaryColor;
+        letter-spacing: 3.6px;
+        font-family: $fontRaleway;
+        font-weight: 800;
+      }
+      .line {
+        width: 90px;
+        height: 2px;
+        background-color: $primaryColor;
+        margin: 20px auto;
+      }
+      p:last-of-type {
+        color: $grayColor;
+        font-size: $fontSize;
+        font-family: $fontRaleway;
+        font-weight: 400;
+        width: 50%;
+        margin: auto;
+      }
+    }
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      .row {
+        justify-content: space-between;
+        .product {
+          height: 500px;
+          border: 1px solid #dedede;
+          margin-bottom: 30px;
+          padding: 0;
+          .image-section {
+            position: relative;
+            img {
+              height: 425px;
+              width: 100%;
+            }
+            .top-circle {
+              background-color: $primaryColor;
+              color: $textColor;
+              border-radius: 50%;
+              width: 80px;
+              height: 80px;
+              display: flex;
+              align-items: center;
+              margin: 15px;
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              span {
+                font-size: $fontSize;
+                text-align: center;
+                width: inherit;
+                font-family: $fontRoboto;
+                font-weight: 400;
+              }
+            }
+            .product-name {
+              display: flex;
+              position: absolute;
+              bottom: 0px;
+              margin: 15px;
+              span {
+                background-color: $primaryColor;
+                color: $textColor;
+                font-size: $fontSize;
+                padding: 10px;
+                font-family: $fontRoboto;
+                font-weight: 400;
+              }
+            }
+          }
+          .price-section {
+            height: 75px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            .price {
+              margin: 0 20px 0 0;
+              font-size: $fontSize;
+              color: $primaryColor;
+              font-family: $fontRoboto;
+              font-weight: 700;
+            }
+            .old-price {
+              margin: 0 20px 0 0;
+              font-size: 14px;
+              color: $grayColor;
+              text-decoration: line-through;
+              font-family: $fontRoboto;
+              font-weight: 400;
+            }
+          }
+        }
+        button {
+          font-size: 18px;
+          color: #333;
+          font-family: $fontRoboto;
+          font-weight: 700;
+          border: 1px solid #333;
+          border-radius: 3px;
+          width: inherit;
+          margin: auto;
+          background-color: transparent;
+          padding: 15px 35px;
+        }
+      }
+      .row:last-of-type {
+        margin-top: 20px;
+      }
+      
+    }
+    .footer {
+      background-image: url('assets/wood_bkg.jpg');
+      background-position: center;
+      margin-top: 100px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .description {
+        font-size: 20px;
+        line-height: 30px;
+        color: $textColor;
+        font-family: Roboto;
+        font-weight: normal;
+        font-style: italic;
+        width: 48%;
+        margin-bottom: 20px;
+      }
+      .line {
+        width: 90px;
+        height: 2px;
+        background-color: $textColor;
+        margin: 0 auto 10px;
+      }
+      .name {
+        font-size: 24px;
+        color: $textColor;
+        font-family: $fontRaleway;
+        font-weight: 900;
+      }
+      .job-name {
+        font-size: $fontSize;
+        color: $textColor;
+        font-family: $fontRaleway;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .container-fluid {
+      .header {
+        p:last-of-type {
+          width: 76%;
+        }
+      }
+      .footer {
+        .description {
+          width: 76%;
+        }
+      }
+    }
+  }
+  .col-sm-6 {
+    width: 49%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-xs-12 {
+    width: 100%;
+  }
+  .container-fluid {
+    .product-gallery {
+      .row {
+        margin: 0px 20px;
+      }
+    }
+  }
+}
+
